@@ -1,9 +1,10 @@
 const router = require('express').Router();
 
-router.route('/')
+router
     .get('/', async (req, res) => {
         res.render('index', { error: null });
     })
+router
     .post('/', async (req, res) => {
         const video_url = req.body.url;
 
