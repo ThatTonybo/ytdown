@@ -9,7 +9,7 @@ ytdown is a quick, small node.js YouTube downloader/converter, that can download
 I made this since I regularly download songs to listen to offline, but usually I run into an issue: the existing downloaders either break lots, or are so full of ads they just hurt. I made my own for personal use so I could download my songs without the need to go through the pain of ads. I've also made it open source and hosted a public version for others to use, because why not? It does help. :smile:
 
 ## Can I run my own copy?
-Of course! I'll soon document how in the wiki, for now it's prettu simple: just download the files, run `npm install` then `node .` to start it locally on port 3000.
+Of course! You'll need to have some spare space on your PC (or on your VPS or such that will host this), as well as the latest stable versions of node.js and npm (plus git). Just use `git clone https://github.com/ThatTonybo/ytdown.git` to clone the files, head into the folder and run `npm install`, then run `node .` to start ytdown, which will run on port 3000 by default.
 
 ## Ideas/current to-do list:
 PS: If you think you could do any of these, go ahead and submit a PR with the code and I'll happily add it!  
@@ -17,5 +17,7 @@ PS: If you think you could do any of these, go ahead and submit a PR with the co
 - [ ] Delete downloaded files after 24 hours?  
 - [ ] Instead of using a random string for the downloaded file, get the video title/ID and set it as that.  
 - [ ] Add a "downloading" page to show progress?  
+- [ ] Add some error handlers, like a "run out of space" error for things that actually kill the process.  
+- [ ] A better UI design that fully works on mobile. **[in progress]**
 
 Made with :heart: by ThatTonybo — [buy me a coffee :coffee:](https://paypal.me/tonyboo)!
