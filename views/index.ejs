@@ -4,15 +4,27 @@
 <%- include('partials/header.ejs'); %>
 </head>
 <body>
-    <img src="/logo.png" alt="ytdown" width="66" height="72"/>
+    <br /> <br /> <br />
+
+    <% if (error) { %>
+        <center>
+            <div class="error">
+                <p><%- error %></p>
+            </div>
+        </center>
+    <% } %>
 
     <center>
         <p>Copy and paste a YouTube video link to download it.</p>
         <form action="/" method="post">
-            <input type="text" name="url" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/> <br />
+            <input type="text" name="url" placeholder="🔗 https://www.youtube.com/watch?v=dQw4w9WgXcQ"/> <br />
+            <input type="text" name="format" placeholder="⚡ Format to download the video in; 'mp3' or 'mp4'"/> <br />
             <br />
             <input class="button" type="submit" value="Download"/>
         </form>
+        <p class="footer-text">
+            Made with <i class="fas fa-heart fa-1x heart"></i> by ThatTonybo &mdash; this is <a href="https://github.com/ThatTonybo/ytdown">open source</a>!
+        </p>
     </center>
 </body>
 </html>

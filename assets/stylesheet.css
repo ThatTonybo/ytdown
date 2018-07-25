@@ -39,3 +39,16 @@ input[type="text"]:hover, input[type="text"]:focus {
 .button:hover {
     background: #ff5151;
 }
+
+.error {
+    background: #ff5151;
+    padding: 14px 22px;
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+.heart {
+    color: #ff5151;
+}
