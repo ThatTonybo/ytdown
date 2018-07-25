@@ -19,6 +19,10 @@ PS: If you think you could do any of these, go ahead and submit a PR with the co
 - [ ] Instead of using a random string for the downloaded file, get the video title/ID and set it as that.  
 - [ ] Add a "downloading" page to show progress?  
 - [ ] Add some error handlers, like a "run out of space" error for things that actually kill the process.  
-- [ ] A better UI design that fully works on mobile. **[in progress]**
+- [ ] A better UI design that fully works on mobile. **[in progress]**  
+
+## Screenshots?
+![Success!](https://i.imgur.com/UL7F30W.png)
+![Oh no an error..](https://i.imgur.com/Ef6fCcV.png)
 
 Made with :heart: by ThatTonybo — [buy me a coffee :coffee:](https://paypal.me/tonyboo)!
