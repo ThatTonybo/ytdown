@@ -11,4 +11,4 @@ I made this since I regularly download songs to listen to offline, but usually I
 ## Can I run my own copy?
 Of course! I'll soon document how in the wiki, for now it's prettu simple: just download the files, run `npm install` then `node .` to start it locally on port 3000.
 
-Made with :heart: by ThatTonybo — [buy me a coffee :coffee:](paypal.me/tonyboo)!
+Made with :heart: by ThatTonybo — [buy me a coffee :coffee:](https://paypal.me/tonyboo)!
