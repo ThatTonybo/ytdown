@@ -9,12 +9,16 @@ p,a,code,pre,input,.button {
     font-weight: 300;
 }
 
+a {
+    color: #4e4e4e;
+}
+
 body {
     margin: 0 0;
     padding: 24px 58px;
 }
 
-input[type="text"] {
+input[type="text"], select {
     background: #ffffff;
     width: 440px;
     padding: 10px 18px;
@@ -24,8 +28,17 @@ input[type="text"] {
     border: 1px solid #3f3f3f;
     transition: .2s ease;
 }
-input[type="text"]:hover, input[type="text"]:focus {
+input[type="text"]:hover, input[type="text"]:focus,
+select:hover, select:focus {
     border: 1px solid #ff5151;
+}
+
+select {
+    color: #ff5151;
+}
+
+.placeholder {
+    color: #CEC9DB !important;
 }
 
 .button {
@@ -43,6 +56,22 @@ input[type="text"]:hover, input[type="text"]:focus {
 .error {
     background: #ff5151;
     padding: 14px 22px;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+
+    position: fixed;
+}
+.success {
+    background: #51ff6e;
+    padding: 14px 22px;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+
+    position: fixed;
 }
 
 .footer-text {

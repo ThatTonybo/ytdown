@@ -4,24 +4,44 @@
 <%- include('partials/header.ejs'); %>
 </head>
 <body>
-    <br /> <br /> <br />
+        <% if (error) { %>
+            <center>
+                <% if (error.type === 'success') { %>
+                    <div class="success">
+                        <p><i class="fas fa-check-square fa-1x"></i> &nbsp; <%- error.msg %></p>
+                    </div>
+                <% } else { %>
+                    <div class="error">
+                        <p><i class="fas fa-exclamation-triangle fa-1x"></i> &nbsp; <%- error.msg %></p>
+                    </div>
+                <% } %>
+    
+                <br /><br /><br /><br />
+            </center>
+        <% } %>
 
-    <% if (error) { %>
-        <center>
-            <div class="error">
-                <p><%- error %></p>
-            </div>
-        </center>
-    <% } %>
+    <p>⚡ ytdown</p>
+
+    <br /> <br /> <br />
 
     <center>
         <p>Copy and paste a YouTube video link to download it.</p>
         <form action="/" method="post">
-            <input type="text" name="url" placeholder="🔗 https://www.youtube.com/watch?v=dQw4w9WgXcQ"/> <br />
-            <input type="text" name="format" placeholder="⚡ Format to download the video in; 'mp3' or 'mp4'"/> <br />
+            <input type="text" name="url" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/> <br />
+            
+            <select id="format" name="format">
+                <option class="placeholder" value="">Select a format to download the video in.</option>
+                <option value="mp3">.mp3 (audio)</option>
+                <option value="mp4">.mp4 (video)</option>
+            </select><br />
+
             <br />
-            <input class="button" type="submit" value="Download"/>
+
+            <input class="button" type="submit" value="Download video."/>
         </form>
+
+        <br />
+
         <p class="footer-text">
             Made with <i class="fas fa-heart fa-1x heart"></i> by ThatTonybo &mdash; this is <a href="https://github.com/ThatTonybo/ytdown">open source</a>!
         </p>
