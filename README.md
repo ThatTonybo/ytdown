@@ -11,4 +11,11 @@ I made this since I regularly download songs to listen to offline, but usually I
 ## Can I run my own copy?
 Of course! I'll soon document how in the wiki, for now it's prettu simple: just download the files, run `npm install` then `node .` to start it locally on port 3000.
 
+## Ideas/current to-do list:
+PS: If you think you could do any of these, go ahead and submit a PR with the code and I'll happily add it!  
+  
+[ ] Delete downloaded files after 24 hours?
+[ ] Instead of using a random string for the downloaded file, get the video title/ID and set it as that.
+[ ] Add a "downloading" page to show progress?
+
 Made with :heart: by ThatTonybo — [buy me a coffee :coffee:](https://paypal.me/tonyboo)!
