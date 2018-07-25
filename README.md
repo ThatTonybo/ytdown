@@ -18,7 +18,7 @@ PS: If you think you could do any of these, go ahead and submit a PR with the co
 - [ ] Delete downloaded files after 24 hours?  
 - [ ] Instead of using a random string for the downloaded file, get the video title/ID and set it as that.  
 - [ ] Add a "downloading" page to show progress?  
-- [x] ~~Add some error handlers, like a "run out of space" error for things that actually kill the process.~~ (pretty much done, might need a few improvements later on though :white_check_mark:)  
+- [x] ~~Add some error handlers, like a "run out of space" error for things that actually kill the process.~~
 - [ ] A better UI design that fully works on mobile. **[in progress]**  
 
 ## Screenshots?
