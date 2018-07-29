@@ -12,4 +12,12 @@ app.use(bodyParser.json());
 
 app.use(require('./routes'));
 
-server.listen(3000, () => console.log(`Listening on port 3000`));
+// port
+let port = 3000;
+const cmdArgs = require('minimist')(process.argv.slice(2));
+if (cmdArgs['p']) {
+    port = parseInt(cmdArgs.p);
+}
+
+
+server.listen(port, () => console.log(`Listening on port ${port}`));
