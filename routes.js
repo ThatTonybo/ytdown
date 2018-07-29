@@ -3,7 +3,7 @@ const router = require('express').Router();
 const fs = require('fs')
     , ytdl = require('ytdl-core')
     , path = require('path')
-    , ffmpeg   = require('fluent-ffmpeg')
+    , ffmpeg   = require('fluent-ffmpeg-extended')
     , rs = require('randomstring');
 
 router.get('/', async (req, res) => {
@@ -20,7 +20,7 @@ router
             return res.render('index', { error: { type: 'error', msg: 'No video URL found, provide a youtube.com or youtu.be video link.' } });
 
             if (format_chosen !== 'mp3' && format_chosen !== 'mp4' && !format_chosen && format_chosen === '')
-            return res.render('index', { error: { type: 'error', msg: 'Incorrect/unsupported/no format supplied, please select "mp3" or "mp4".' } });
+            return res.render('index', { error: { type: 'error', msg: 'No format supplied, please select "mp3" or "mp4".' } });
 
             if (format_chosen === 'mp4') {
                 const s = ytdl(`${video_url}`, { filter: (format) => format.container === `mp4` })
@@ -34,10 +34,9 @@ router
                 const stream = ytdl(`${video_url}`, { filter: (format) => format.container === `mp4` });
 
                 ffmpeg(stream)
-                    .audioBitrate(128).save(`${__dirname}/${code}.mp3`)
-                    .on('end', () => {
-                        return res.render('index', { error: { type: 'success', msg: `Video downloaded to ${code}.mp3, <a href="/download/${code}.mp3">click here</a> to download it.` } });
-                    });
+                withAudioBitrate('128k').toFormat('mp3').savetoFile(`${__dirname}/${code}.mp3`, async(stdout, stderr) => {
+                    return res.render('index', { error: { type: 'success', msg: `Video downloaded to ${code}.mp3, <a href="/download/${code}.mp3">click here</a> to download it.` } });
+                });
             }
 
         }
